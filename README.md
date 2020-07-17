@@ -14,7 +14,15 @@ $ cd clever-example-app
 $ npm install
 ```
 
-Then, edit the `.env` file to add your Clever Client ID and Clever Client Secret. These can be found on your [Clever Dashboard](https://apps.clever.com/) under the "Settings" tab.
+Then, edit the `.env` file to add your Clever Client ID and Clever Client Secret. These can be found on your [Clever Dashboard](https://apps.clever.com/) under the "Settings" tab, or in the Desmos 1Password under Clever Dev API.  In addition, set the `REDIRECT_URL` and `SESSION_SECRET` variables.  Note that the `REDIRECT_URL` must also be configured in the Clever Dashboard.
+
+`.env`:
+```
+CLEVER_CLIENT_ID=<ClientID>
+CLEVER_CLIENT_SECRET=<Client Secret>
+REDIRECT_URL=http://localhost:5000/oauth
+SESSION_SECRET=abc123
+```
 
 Now, run the app:
 ```sh
@@ -22,6 +30,14 @@ $ npm start
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
+
+Click the Signup with Clever button, then login using, e.g. 
+```
+username: teacher1 
+password: clever
+```
+
+See https://dev.clever.com/docs/classroom-testing#testing-with-multiple-users for more testing info.
 
 ## Implementing "Sign Up with Clever"
 The basic sequence to implement Sign Up with Clever is as follows:

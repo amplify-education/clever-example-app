@@ -42,7 +42,7 @@ async function getToken(code) {
 }
 
 async function request(route, token) {
-  var url = `https://api.clever.com/v2.0${route}`;
+  var url = `https://api.clever.com/v2.1${route}`;
 
   const data = req({
     url: url,

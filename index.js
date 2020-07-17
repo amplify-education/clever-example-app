@@ -61,8 +61,8 @@ app.get('/signup', (req, res) => {
     + "response_type=code"
     + "&redirect_uri=" + encodeURIComponent(REDIRECT_URL)
     + "&client_id=" + CLIENT_ID
-    // IMPORTANT: We use this in the demo to always send the user to log in via the Clever SSO demo district. In your app, remove this!
-    + "&district_id=5adf3107d395a8000199343e";
+    // IMPORTANT: We use this in the demo to always send the user to log in via the Clever SSO demo district. In your app, remove this!    
+    + "&district_id=5b2ad81a709e300001e2cd7a";
 
   // Rendering the signup page
   return res.render("signup", { login_url });
